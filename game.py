@@ -19,10 +19,10 @@ class Game:
             advance_frame()
 
     def _reset_is_first_throw_flag(self, pins: int):
-        def is_strike() -> bool:
+        def strike() -> bool:
             return pins == 10
         if self._is_first_throw_in_frame:
-            if not is_strike():
+            if not strike():
                 self._is_first_throw_in_frame = False
         else:
             self._is_first_throw_in_frame = True
